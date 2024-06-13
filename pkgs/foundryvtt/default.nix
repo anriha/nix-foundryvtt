@@ -128,7 +128,7 @@ let
         attrs.majorVersion or (
           /**/ if isVersion build v9 then "9"
           else if isVersion build v10 then "10"
-          else if isVersion build v11 then "11"
+          else if isVersion build v11 then "12"
           else null
         );
 
@@ -166,7 +166,7 @@ let
     in
     "${mappedVersion}+${build}";
 
-  defaultVersion = "11.0.0+315";
+  defaultVersion = "12.0.0+327";
 in
 stdenv.mkDerivation (finalAttrs: {
   name = "foundryvtt-${formatVersion finalAttrs}";
