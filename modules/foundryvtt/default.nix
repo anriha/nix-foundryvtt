@@ -236,6 +236,7 @@ in
         ExecStart = "${lib.getBin cfg.package}/bin/foundryvtt --headless --noupdate --dataPath=\"${config.services.foundryvtt.dataDir}\"";
         StateDirectory = "foundryvtt";
         StateDirectoryMode = "0750";
+        ReadWritePaths = [ "${config.services.foundryvtt.dataDir}" ];
 
         # Hardening
         CapabilityBoundingSet = [
